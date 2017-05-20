@@ -53,9 +53,8 @@ jqe.execute('$.store.book[*]').execute('$..author',2,2).file('./base.json');
 
 ```javascript
 {
-object: [ 'Herman Melville', 'J. R. R. Tolkien' ],
-  info:
-   {
+  object: [ 'Herman Melville', 'J. R. R. Tolkien' ],
+  info: {
      total_pages: 2,
      pages: 2,
      current_page: 2,
@@ -68,8 +67,8 @@ object: [ 'Herman Melville', 'J. R. R. Tolkien' ],
      total_results: 4,
      first_result: 2,
      last_result: 3,
-     per_page: undefined
- }
+     per_page: 2
+  }
 }
 ```
 
