@@ -57,7 +57,7 @@ class JSONQueryEngine{
         var paginator = new Paginator(limit,offset);
         var info = paginator.build(length, current_page);
         delete info['results'];
-        info.per_page = info.limit;
+        info.per_page = limit;
         if(info.previous_page < 0) info.previous_page = 0;
 
         return new JSONQueryResult(result,info);
