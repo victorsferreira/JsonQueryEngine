@@ -76,6 +76,7 @@ jqe.execute('$.store.book[*]').execute('$..author',2,2).file('./base.json');
 **all():** returns the all the elements in the result set
 
 External links:
+
 [jsonpath package](https://www.npmjs.com/package/jsonpath)
 
 [paginator package](https://www.npmjs.com/package/paginator)
