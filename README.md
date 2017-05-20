@@ -1,5 +1,5 @@
 # JSONQueryEngine
-JSONQueryEngine uses the basis of `jsonpath` and `paginator` to crawl in an object sweetly.
+JSONQueryEngine uses the basis of `jsonpath` and `paginator` to crawl sweetly into an object.
 
 The search criteria must be a valid JSONPath (XPath for JSON) query.
 
@@ -75,7 +75,7 @@ jqe.execute('$.store.book[*]').execute('$..author',2,2).file('./base.json');
 
 **all():** returns the all the elements in the result set
 
-External links:
+## External links:
 
 [jsonpath package](https://www.npmjs.com/package/jsonpath)
 
