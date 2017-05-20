@@ -2,10 +2,9 @@ var jsonPath = require('jsonpath');
 var Paginator = require('paginator');
 var fs = require('fs');
 
-class JsonQueryEngine{
+class JSONQueryEngine{
     constructor(object){
-        this.object = object;
-        this.convertObject();
+        this.setObject(object);
     }
 
     convertObject(){
@@ -16,6 +15,11 @@ class JsonQueryEngine{
                 console.log(e);
             }
         }
+    }
+
+    setObject(object){
+        this.object = object;
+        this.convertObject();
     }
 
     file(path){
@@ -48,11 +52,11 @@ class JsonQueryEngine{
         info.per_page = info.limit;
         if(info.previous_page < 0) info.previous_page = 0;
 
-        return new JsonQueryResult(result,info);
+        return new JSONQueryResult(result,info);
     }
 }
 
-class JsonQueryResult extends JsonQueryEngine{
+class JSONQueryResult extends JSONQueryEngine{
     constructor(result,info){
         super();
         this.object = result;
@@ -80,5 +84,5 @@ class JsonQueryResult extends JsonQueryEngine{
 }
 
 module.exports = function(object){
-    return new JsonQueryEngine(object);
+    return new JSONQueryEngine(object);
 };
