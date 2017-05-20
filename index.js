@@ -30,6 +30,14 @@ class JSONQueryEngine{
         }
     }
 
+    save(path){
+        try {
+            fs.writeFileSync(path,JSON.stringify(this.object));
+        } catch (e) {
+            return e;
+        }
+    }
+
     execute(query,limit,offset=0){
         this.convertObject();
         if(!Array.isArray(this.object)) this.object = [this.object];
