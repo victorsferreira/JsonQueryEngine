@@ -1,11 +1,18 @@
 {
   "name": "json-query-engine",
-  "version": "0.2.3",
-  "description": "",
+  "version": "0.2.4",
+  "description": "Query and paginate a JSON object with JSONPath",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/victorsferreira/json-query-engine"
+  },
+  "keywords": [
+      "json","query","xpath","jsonpath"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
