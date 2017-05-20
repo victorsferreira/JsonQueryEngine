@@ -1,6 +1,6 @@
 {
-  "name": "json",
-  "version": "1.0.0",
+  "name": "json-query-engine",
+  "version": "0.0.9",
   "description": "",
   "main": "index.js",
   "scripts": {

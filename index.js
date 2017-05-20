@@ -82,22 +82,3 @@ class JsonQueryResult extends JsonQueryEngine{
 module.exports = function(object){
     return new JsonQueryEngine(object);
 };
-
-////////////////
-// function execute(data,query,limit,offset=0){
-//     var result = jsonPath.query(data, query);
-//     result = result.slice(offset,(limit ? offset+limit : null));
-//
-//     var length = result.length;
-//     var current_page = Math.ceil(offset / limit) + 1;
-//
-//     var paginator = new Paginator(limit,offset);
-//     var info = paginator.build(length, current_page);
-//     delete info['results'];
-//     info.per_page = info.limit;
-//
-//     return {
-//         info: info,
-//         result: result
-//     }
-// }
