@@ -1,9 +1,9 @@
-#JSONQueryEngine
+# JSONQueryEngine
 JSONQueryEngine uses the basis of `jsonpath` and `paginator` to crawl in an object sweetly.
 
 The search criteria must be a valid JSONPath (XPath for JSON) query.
 
-##Example
+## Example
 Given the input
 
 ```json
@@ -49,13 +49,13 @@ jqe.file('./example.json');
 jqe.execute('$.store.book[*]').execute('$..author',2,2).file('./base.json');
 ```
 
-##Outputs
+## Outputs
 
 ```javascript
 [ 'Herman Melville', 'J. R. R. Tolkien' ]
 ```
 
-##API reference:
+## API reference:
 
 **JSONQueryEngine([]):** creates a new engine
 
