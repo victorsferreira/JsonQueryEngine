@@ -46,8 +46,7 @@ Given the input
 var JSONQueryEngine = require('json-query-engine');
 var jqe = JSONQueryEngine();
 jqe.file('./example.json');
-
-jqe.execute('$.store.book[*]').execute('$..author',2,2);
+jqe.execute('$.store.book[*]').execute('$..author',2,2).file('./base.json');
 ```
 
 ##Outputs
@@ -63,6 +62,8 @@ jqe.execute('$.store.book[*]').execute('$..author',2,2);
 **setObject(input):** feeds JSONQueryEngine with a Javascript object or JSON string
 
 **file(path):** loads an object from the content of a file
+
+**save(path):** saves result set to a file
 
 **execute(query,[limit,[offset]]):** returns a JSONQueryResult
 
