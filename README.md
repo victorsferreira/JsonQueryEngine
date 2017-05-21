@@ -47,6 +47,12 @@ var JSONQueryEngine = require('json-query-engine');
 var jqe = JSONQueryEngine();
 jqe.file('./example.json');
 jqe.execute('$.store.book[*]').execute('$..author',2,2).file('./base.json');
+
+var modified_result = result.modify(function(item){
+    return item+' modified';
+});
+
+console.log(modified_result);
 ```
 
 **Outputs**
@@ -91,6 +97,12 @@ jqe.execute('$.store.book[*]').execute('$..author',2,2).file('./base.json');
 **last():** returns the last element
 
 **all():** returns the all the elements in the result set
+
+**each(callback([item,index])):** iterates through the result set, passes the result item and the index to the provided callback.
+Returning false in the callback will stop the loop.
+
+**modify(callback([item,index])):** iterates through the result set, passes the result item and the index to the provided callback.
+The returning value of the callback will replace the item (returning itself keeps the item intact). Returns the resulting result set.
 
 ## External links:
 
