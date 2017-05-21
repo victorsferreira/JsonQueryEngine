@@ -49,7 +49,7 @@ jqe.file('./example.json');
 jqe.execute('$.store.book[*]').execute('$..author',2,2).file('./base.json');
 ```
 
-## Outputs
+**Outputs**
 
 ```javascript
 {
@@ -74,7 +74,7 @@ jqe.execute('$.store.book[*]').execute('$..author',2,2).file('./base.json');
 
 ## API reference:
 
-**JSONQueryEngine([]):** creates a new engine
+**JSONQueryEngine([input]):** creates a new data source
 
 **setObject(input):** feeds JSONQueryEngine with a Javascript object or JSON string
 
